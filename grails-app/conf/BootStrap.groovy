@@ -6,10 +6,10 @@ class BootStrap {
     
 		environments {
 				development{
-				new Menu(title:"Home", url:"",  active:true).save(flush: true)
-				new Menu(title:"About", url:"",  active:false).save(flush: true)
-				new Menu(title:"Home1", url:"",  active:false).save(flush: true)
-				new Menu(title:"Home2", url:"",  active:false).save(flush: true)
+				def a = new Menu(title:"Home", url:"",  active:true, subMenu: null).save(flush: true)
+				def b = new Menu(title:"About", url:"",  active:false, subMenu: null).save(flush: true)
+				//def c = new Menu(title:"Home1", url:"",  active:false, subMenu: null).save(flush: true)
+				def d = new Menu(title:"Home2", url:"",  active:false, subMenu: [a,b]).save(flush: true)
 				
 				println("Starting")
 			}

@@ -11,10 +11,37 @@
     
       <ul class="nav navbar-nav navbar-right">
       <g:each in="${menus}">
-    <li class="${it.active?'active':''}"><g:link > ${it.title}</g:link></li>
+   <g:if test="${it?.subMenu}">
+     <li class="${it.active?'active':''} dropdown"><g:link class="dropdown-toggle" data-toggle="dropdown"> ${it.title} <span class="caret"></span></g:link>
+    
+    	 <ul class="dropdown-menu dropdown-menu-left" role="menu">
+    	<g:each in="${it.subMenu}" var="sub">
+    	
+    	   <li><a href="#">${sub.title}</a></li>
+    	
+    	</g:each>
+    	 </ul>
+    	
+    </li>
+   </g:if>
+   <g:else>
+    <li class="${it.active?'active':''}"><g:link> ${it.title}</g:link>
+     </li>
+   </g:else>
+  
    
 </g:each>
        
+     <!--     
+     	<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">SERMONS <span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-menu-left" role="menu">
+            <li><a href="sermons.html">Christ-Occupied</a></li>
+            <li><a href="sermons.html">God's Love</a></li>
+            <li><a href="sermons.html">Faithfulness</a></li>
+            <li><a href="sermons.html">Praise Him</a></li>
+          </ul>
+        </li>
+        -->
       </ul>
    
    
