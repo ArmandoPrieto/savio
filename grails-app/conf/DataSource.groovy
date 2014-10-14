@@ -18,6 +18,7 @@ hibernate {
 environments {
     development {
         dataSource {
+			dialect = savioWebPage.ImprovedH2Dialect //Solve hibernate4 - mysql problem
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             //url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
 			
@@ -37,7 +38,7 @@ environments {
         }
     }
     production {
-        dataSource {
+        dataSource {https://www.google.com/search?client=ubuntu&channel=fs&q=ERROR+hbm2ddl.SchemaExport&ie=utf-8&oe=utf-8
             dbCreate = "create-drop"
             url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
             properties {
