@@ -43,7 +43,7 @@
     <div class="item slide-three">
       <div class="container">
         <div class="carousel-caption">
-          <h2>Grace and Truth</h2>
+          <h2>Tijuana Mission Trip</h2>
           <p class="lead">For God did not send his Son into the world to condemn the world, but to save the world through him. <em>John 3:17</em></p>
           <p><a class="btn btn-lg btn-primary" href="image-gallery.html" role="button">Browse gallery &rarr;</a></p>
         </div>
@@ -68,7 +68,7 @@
 <!--FEATURED BLOCK-->
 <div class="container">
   <div class="row feature-block">
-    <div class="col-md-4 col-sm-6 has-margin-bottom"> <img class="img-responsive" src="${resource(dir: 'images', file: 'thumb-1.jpg')}" alt="catholic church">
+    <div class="col-md-4 col-sm-6 has-margin-bottom"> <img class="img-responsive" src="${resource(dir: 'images', file: 'cutmypic.png')}" alt="catholic church">
       <h5>GUIDED BY THE HOLY SPIRIT</h5>
       <p>Experience God's Wisdom each day as you are lead by the Holy Spirit. Walk effortlessly into success and happiness and understand the Father's love for you. </p>
       <p><a href="about.html" role="button">View details →</a></p>
@@ -212,7 +212,9 @@
 </div><g:render template="/common/menu" />
 <!-- END BLOG LIST / LATEST SERMONS --> 
 
-<!--CHARITY DONATION-->
+<!--CHARITY DONATION
+
+
 <div class="container has-margin-bottom">
   <div class="section-title">
     <h4>GRACE OUTREACH </h4>
@@ -239,15 +241,16 @@
     </div>
   </div>
 </div>
-<!--// END CHARITY DONATION --> 
+
+// END CHARITY DONATION --> 
 
 <!--OUR GALLERY-->
 <div class="container has-margin-bottom">
   <div class="section-title">
-    <h4> OUR GALLERY </h4>
+    <h4> OUR CORE TEAM </h4>
   </div>
   <div class="img-gallery row">
-    <div class="col-sm-4 col-md-3"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'img_gallery_1.jpg')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'gallery_thumb_1.jpg')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+    <div class="col-sm-4 col-md-3"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'svl.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'svl.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
     <div class="col-sm-4 col-md-3"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'img_gallery_2.jpg')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'gallery_thumb_2.jpg')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
     <div class="col-sm-4 col-md-3"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'img_gallery_3.jpg')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'gallery_thumb_3.jpg')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
     <div class="col-sm-4 col-md-3"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'img_gallery_4.jpg')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'gallery_thumb_4.jpg')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
@@ -292,24 +295,45 @@
   </div>
   <div class="row feature-block">
     <div class="col-md-4 col-sm-6 has-margin-bottom"> <img class="img-responsive" src="${resource(dir: 'images', file: 'ministry_1.jpg')}" alt="catholic church">
-      <h5>YOU CANNOT, BUT GOD CAN</h5>
+      <h5>CAMP SAVIO</h5>
       <p>The world says that blood and sweat equals success. But we can rest in Jesus' finished work at the cross because of His blood, sweat, tears... </p>
       <p><a href="ministry.html" role="button">Read more →</a></p>
     </div>
     <!-- /.col-md-4 -->
     <div class="col-md-4 col-sm-6 has-margin-bottom"> <img class="img-responsive" src="${resource(dir: 'images', file: 'ministry_2.jpg')}" alt="ministry sermon">
-      <h5>DELIGHT YOURSELF IN LORD</h5>
+      <h5>MONDAY YOUTH GROUP</h5>
       <p>When we rest in the Lord and draw from His Word every day, we have the confidence in knowing our Father has already opened doors...</p>
       <p><a href="ministry.html" role="button">Read more →</a></p>
     </div>
     <!-- /.col-md-4 -->
     <div class="col-md-4 col-sm-8 col-sm-offset-2 col-md-offset-0 center-this has-margin-bottom"> <img class="img-responsive" src="${resource(dir: 'images', file: 'ministry_3.jpg')}" alt="bulletin programs">
-      <h5>FAITH DEVELOPS PERSEREVANCE</h5>
+      <h5>YOUNG ADULT GROUP</h5>
       <p>Through these he has given us his very great and precious promises, so that through them you may participate in the divine nature...</p>
       <p><a href="ministry.html" role="button">Read more →</a></p>
     </div>
     <!-- /.col-md-4 --> 
   </div>
+  <div class="row feature-block">
+    <div class="col-md-4 col-sm-6 has-margin-bottom"> <img class="img-responsive" src="${resource(dir: 'images', file: 'ministry_1.jpg')}" alt="catholic church">
+      <h5>SALESIAN ORATORY</h5>
+      <p>The world says that blood and sweat equals success. But we can rest in Jesus' finished work at the cross because of His blood, sweat, tears... </p>
+      <p><a href="ministry.html" role="button">Read more →</a></p>
+    </div>
+    <!-- /.col-md-4 -->
+    <div class="col-md-4 col-sm-6 has-margin-bottom"> <img class="img-responsive" src="${resource(dir: 'images', file: 'ministry_2.jpg')}" alt="ministry sermon">
+      <h5>SAVIO BASKETBALL</h5>
+      <p>When we rest in the Lord and draw from His Word every day, we have the confidence in knowing our Father has already opened doors...</p>
+      <p><a href="ministry.html" role="button">Read more →</a></p>
+    </div>
+    <!-- /.col-md-4 -->
+    <div class="col-md-4 col-sm-8 col-sm-offset-2 col-md-offset-0 center-this has-margin-bottom"> <img class="img-responsive" src="${resource(dir: 'images', file: 'ministry_3.jpg')}" alt="bulletin programs">
+      <h5>ALTAR SERVERS</h5>
+      <p>Through these he has given us his very great and precious promises, so that through them you may participate in the divine nature...</p>
+      <p><a href="ministry.html" role="button">Read more →</a></p>
+    </div>
+    <!-- /.col-md-4 --> 
+  </div>
+  
 </div>
 <!-- // END OUR MINISTRIES--> 
 
@@ -353,9 +377,9 @@
       </div>
       <div class="col-sm-6 col-md-3">
         <h5>OUR ADDRESS</h5>
-        <p> Catholic Church<br>
-          121 King Street, Melbourne <br>
-          Victoria 3000 Australia<br>
+        <p> St. Dominic Savio Church<br>
+          13400 Bellflower Blvd. <br>
+          Bellflower, CA<br>
           <br>
           Phone: +61 3 8376 6284<br>
           Email: <a href="#">mail@catholicwebsite.com</a></p>

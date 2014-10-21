@@ -167,13 +167,14 @@ font-size: 25px;
 	border-color: #e7ad47;
 }
 .well {
-	background:#f9f1e6;
+	background:#99ebe6;
 	border:0;
 	-webkit-box-shadow:none;
 	box-shadow:none;
 }
 .highlight-bg {
-	background:#f9f1e6;
+	/*background:#99ebe6;*/
+	background:#99ebe6;
 	padding: 24px 0;
 }
 .has-margin-top {
@@ -434,7 +435,7 @@ top: 25%;
 	background-size:cover;
 }
 .slide-three {
-	background:url(../images/church-man-hope.jpg) no-repeat;
+	background:url(../images/BeFunky_full.jpg) no-repeat;
 	background-size:cover;
 }
 /*========== 4. UPCOMING EVENT ==============*/
@@ -711,7 +712,7 @@ margin-top: 20px;
 .list-group-item {
 	background: url(../images/play.png) no-repeat 0 15px transparent;
 	border:0;
-	border-top:1px solid #e7e1df;
+	border-top:1px solid #483F34;
 	padding-left:20px;
 }
 .list-group-item:first-child {
@@ -797,11 +798,11 @@ a.list-group-item:hover, a.list-group-item:focus {
 
 footer {
 	background:#53504c;
-	color:#f9f1e6;
+	color:#99ebe6;
 	padding-top:5px;
 }
 footer h5 {
-	color:#f9f1e6;
+	color:#99ebe6;
 }
 .footer-links {
 	margin:0;
@@ -837,7 +838,7 @@ footer a:hover, footer a:focus {
 
 
 .subpage-head {
-	background-color:#f9f1e6;
+	background-color:#99ebe6;
 	padding-top: 80px;
 	padding-bottom: 20px;
 }
@@ -933,7 +934,7 @@ background-color: #D3CFCC;
 
 .location-map {
 	height:260px;
-	background-color: #f9f1e6;
+	background-color: #99ebe6;
 }
 .location-map iframe {
 	width:100%;
@@ -944,7 +945,7 @@ background-color: #D3CFCC;
 /*========== 18. CHARITY DONATION ==============*/
 
 .charity-box {
-	background:#f9f1e6;
+	background:#99ebe6;
 	overflow:hidden;
 }
 

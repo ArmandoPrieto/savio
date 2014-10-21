@@ -10,7 +10,7 @@
 <meta name="author" content="Surjith SM">
 <title>Church Website Template - Our Church Responsive HTML5</title>
 
- <link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.min.css')}" />
+ <link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.css')}" />
 <!-- Church Template CSS -->
  <link rel="stylesheet" href="${resource(dir: 'css', file: 'church.css')}" />
  <link rel="stylesheet" href="${resource(dir: 'css', file: 'fancybox.css')}" />

@@ -47,17 +47,26 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-        // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
+		
+		
+		  // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         runtime 'mysql:mysql-connector-java:5.1.29'
 		// runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
 		
+		
+		
+		
     }
 
     plugins {
-		
-		
-		
+		//Locale
+		compile ":locale-configuration:1.0"
+		//Joda time
+		compile ":joda-time:1.5"
+		//Grails Rest
+		compile ":rest-client-builder:2.0.0"
+	//	compile ":rest:0.8"
 		// plugins for the build system only
 		compile ":class-domain-uml:0.1.5"
 		
