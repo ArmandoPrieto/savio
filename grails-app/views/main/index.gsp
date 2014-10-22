@@ -220,14 +220,34 @@
     <h4> OUR CORE TEAM </h4>
   </div>
   <div class="img-gallery row">
-    <div class="col-sm-4 col-md-3"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'svl.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'svl.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
-    <div class="col-sm-4 col-md-3"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'img_gallery_2.jpg')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'gallery_thumb_2.jpg')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
-    <div class="col-sm-4 col-md-3"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'img_gallery_3.jpg')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'gallery_thumb_3.jpg')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
-    <div class="col-sm-4 col-md-3"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'img_gallery_4.jpg')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'gallery_thumb_4.jpg')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
-    <div class="col-sm-4 col-md-3"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'img_gallery_5.jpg')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'gallery_thumb_5.jpg')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
-    <div class="col-sm-4 col-md-3"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'img_gallery_6.jpg')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'gallery_thumb_6.jpg')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
-    <div class="col-sm-4 col-md-3"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'img_gallery_7.jpg')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'gallery_thumb_7.jpg')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
-    <div class="col-sm-4 col-md-3"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'img_gallery_8.jpg')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'gallery_thumb_8.jpg')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+   <div class="col-md-12">
+        <div class="owl-carousel3">
+        
+     
+    <div class="item"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'taaj.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'taaj.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+    <div class="item"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'julio.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'julio.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+    <div class="item"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'Yami.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'Yami.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+    <div class="item"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'alynn.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'alynn.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+   
+    
+    <div class="item"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'michael.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'michael.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+    <div class="item"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'david.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'david.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+    <div class="item"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'gaby.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'gaby.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+    <div class="item"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'nick.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'nick.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+    
+    
+    <div class="item"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'armando.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'armando.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+    <div class="item"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'daya.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'daya.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+    <div class="item"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'jacob.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'jacob.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+    <div class="item"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'jose.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'jose.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+  	
+  	
+  	<div class="item"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'aaron.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'aaron.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+    <div class="item"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'edi.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'edi.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+    <div class="item"> <a class="fancybox" href="${resource(dir: 'images/gallery', file: 'christina.png')}" data-fancybox-group="gallery" title="church image gallery"> <img src="${resource(dir: 'images/gallery/thumb', file: 'christina.png')}" class="img-responsive" width="270" height="270" alt="church image gallery"> </a> </div>
+ 	
+  </div>
+   </div>
   </div>
 </div>
 <!--// END OUR GALLERY --> 
@@ -351,8 +371,8 @@
           13400 Bellflower Blvd. <br>
           Bellflower, CA<br>
           <br>
-          Phone: +61 3 8376 6284<br>
-          Email: <a href="#">mail@catholicwebsite.com</a></p>
+         
+          Email: <a href="#">youthministry@saintdominicsavio.org</a></p>
       </div>
       <div class="col-sm-6 col-md-3">
         <h5>CONNECT</h5>

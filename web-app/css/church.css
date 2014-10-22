@@ -136,7 +136,7 @@ font-size: 25px;
 	border-radius: 5px;
 }
 .btn-lg, .btn-group-lg>.btn {
-	padding: 14px 25px;
+	padding: 14px 25px;col-sm-4 col-md-3 
 	font-size: 17px;
 	line-height: 1.3;
 	border-radius: 4px;
