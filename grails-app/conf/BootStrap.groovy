@@ -11,6 +11,8 @@ class BootStrap {
 				//def c = new Menu(title:"Home1", url:"",  active:false, subMenu: null).save(flush: true)
 				def d = new Menu(title:"Home2", url:"",  active:false, subMenu: [a,b]).save(flush: true)
 				
+				//Locale language
+				Locale.setDefault(Locale.ENGLISH);
 				println("Starting")
 			}
 		}

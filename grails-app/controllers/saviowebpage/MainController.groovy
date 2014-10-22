@@ -3,9 +3,17 @@ import administration.Menu
 
 class MainController {
 
+	def googleCalendarReaderService
+	def GoogleBloggerReaderService
     def main_page() {
 		
-		render(view: "index", model:[menus: Menu.list()])
+		def postList = googleBloggerReaderService.getPosts()
+		
+		
+		def eventList = googleCalendarReaderService.getEvents()
+		
+		
+		render(view: "index", model:[menus: Menu.list(), events: eventList, posts: postList])
 		
 		
 	}

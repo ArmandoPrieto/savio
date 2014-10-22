@@ -120,8 +120,4 @@ log4j.main = {
 grails.views.javascript.library="jquery"
 grails.plugins.twitterbootstrap.fixtaglib = true
 
-//Locale
-// order is matters!
-grails.plugins.localeConfiguration.supportedLocales = [new Locale('es'), Locale.ENGLISH]
-grails.plugins.localeConfiguration.defaultLocale = Locale.ENGLISH
 

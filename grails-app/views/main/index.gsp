@@ -74,12 +74,20 @@
       <p><a href="about.html" role="button">View details →</a></p>
     </div>
     <!-- /.col-md-4 -->
-    <div class="col-md-4 col-sm-6 has-margin-bottom"> <img class="img-responsive" src="${resource(dir: 'images', file: 'thumb-2.jpg')}" alt="ministry sermon">
-      <h5>LAW DEMANDS; GRACE SUPPLIES</h5>
-      <p>Jesus came and fulfilled the laws, the only one who could keep the laws so that in Him we can be made righteous and not have to suffer death for our sins. </p>
-      <p><a href="sermons.html" role="button">View details →</a></p>
-    </div>
-    <!-- /.col-md-4 -->
+  		 <g:each in="${posts}">
+   		   <div class="col-md-4 col-sm-6 has-margin-bottom"> 
+   		   
+   		   <div style="width:370px;height:200px;overflow:hidden">
+       <img class="img-responsive" src="${it.image}" alt="ministry sermon">
+		
+</div>
+   		    
+		      <h5>${it.title.toUpperCase()}</h5>
+		      <p>${raw(it.content)}</p>
+		      <p><a href="sermons.html" role="button">View details →</a></p>
+		    </div>
+   		</g:each>
+     <!-- /.col-md-4 -->
     <div class="col-md-4 col-sm-8 col-sm-offset-2 col-md-offset-0 center-this has-margin-bottom"> <img class="img-responsive" src="${resource(dir: 'images', file: 'thumb-3.jpg')}" alt="bulletin programs">
       <h5>CHRIST OCCUPIED</h5>
       <p>It may sound good to Mankind to be self-occupied. But God wants you to be Christ-Occupied and receive all of your blessings through resting in the work of Jesus.</p>
@@ -99,54 +107,16 @@
     <div class="row">
       <div class="col-md-12">
         <div class="owl-carousel">
-          <div class="el-block item">
-            <h4> JULY 16 </h4>
-            <p class="el-head">Weekly meeting &amp; prayer</p>
-            <span>Monday 07:00 AM</span>
-            <p class="el-cta"><a class="btn btn-primary" href="event-single.html" role="button">Details &rarr;</a></p>
+         <g:each in="${events}">
+   
+  			<div class="el-block item">
+            <h4>  ${it.startDateTime.toString('MMM dd').toUpperCase()} </h4>
+            <p class="el-head"> ${it.summary}</p>
+            <span> ${it.startDateTime.toString('EEEE hh:mm aa')}</span>
+            <p class="el-cta"><a class="btn btn-primary" href="${it.htmlLink}" role="button">Details &rarr;</a></p>
           </div>
-          <div class="el-block item">
-            <h4> JUL 29 </h4>
-            <p class="el-head">Show me your faith</p>
-            <span>Thursday 02:00 PM</span>
-            <p class="el-cta"><a class="btn btn-primary" href="event-single.html" role="button">Details &rarr;</a></p>
-          </div>
-          <div class="el-block item">
-            <h4> SEP 19 </h4>
-            <p class="el-head">Perseravance of the saints</p>
-            <span>Saturday 10:00 AM</span>
-            <p class="el-cta"><a class="btn btn-primary" href="event-single.html" role="button">Details &rarr;</a></p>
-          </div>
-          <div class="el-block item">
-            <h4> OCT 14 </h4>
-            <p class="el-head">God's irresistable grace</p>
-            <span>Sunday 11:00 AM</span>
-            <p class="el-cta"><a class="btn btn-primary" href="event-single.html" role="button">Details &rarr;</a></p>
-          </div>
-          <div class="el-block item">
-            <h4> JULY 16 </h4>
-            <p class="el-head">Weekly meeting &amp; prayer</p>
-            <span>Monday 07:00 AM</span>
-            <p class="el-cta"><a class="btn btn-primary" href="event-single.html" role="button">Details &rarr;</a></p>
-          </div>
-          <div class="el-block item">
-            <h4> JUL 29 </h4>
-            <p class="el-head">Show me your faith</p>
-            <span>Thursday 02:00 PM</span>
-            <p class="el-cta"><a class="btn btn-primary" href="event-single.html" role="button">Details &rarr;</a></p>
-          </div>
-          <div class="el-block item">
-            <h4> SEP 19 </h4>
-            <p class="el-head">Perseravance of the saints</p>
-            <span>Saturday 10:00 AM</span>
-            <p class="el-cta"><a class="btn btn-primary" href="event-single.html" role="button">Details &rarr;</a></p>
-          </div>
-          <div class="el-block item">
-            <h4> OCT 14 </h4>
-            <p class="el-head">God's irresistable grace</p>
-            <span>Sunday 11:00 AM</span>
-            <p class="el-cta"><a class="btn btn-primary" href="event-single.html" role="button">Details &rarr;</a></p>
-          </div>
+		</g:each>
+        
         </div>
       </div>
     </div>
