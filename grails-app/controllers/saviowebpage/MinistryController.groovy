@@ -16,7 +16,8 @@ class MinistryController {
     }
 
     def show(Ministry ministryInstance) {
-        respond ministryInstance
+		
+		respond ministryInstance, model:[ministries: Ministry.list(max: 3)] 
     }
 
     def create() {

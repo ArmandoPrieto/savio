@@ -147,7 +147,7 @@
       
       <div class="row">
         <div class="col-md-4 col-sm-4"> <img class="img-responsive center-block" src="${resource(dir: 'images', file: 'thumb-2.jpg')}" alt="bulletin blog"> </div>
-        <div class="col-md-8 col-sm-8 bulletin">
+        <div class="col-md-8 col-sm-8 bulletin"><p>
           <h4 class="media-heading">Lord is Sufficient for all of our needs </h4>
           <p>on 17th June 2014 by <a href="#" class="link-reverse">Jose Mathew</a></p>
           <p class="media-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet...</p>
@@ -283,21 +283,8 @@
   <div class="section-title">
     <h4> OUR MINISTRIES </h4>
   </div>
-   <g:set var="counter" value="${0}" />
-    <g:each in="${ministries}">
-       <g:if test="${counter % 3 == 0}">
-	        <div class="row feature-block">
-		</g:if>
-		<div class="col-md-4 col-sm-6 has-margin-bottom"> <img class="img-responsive" src="${resource(dir: 'images', file: 'ministry_1.jpg')}" alt="catholic church">
-		    <h5>${it.name}</h5>
-		    <p>${it.shortDescription} </p>
-		    <p><a href="ministry.html" role="button">Read more →</a></p>
-		</div>
-		<g:set var="counter" value="${counter + 1}" />
-		<g:if test="${it == ministries.last() || counter % 3 == 0}">
-	    	 </div>
-		</g:if>
-	</g:each>
+   <g:render template="/ministry/list" model="['ministries':ministries,'n':6]"/>
+   
   <div class="row feature-block">
     <div class="col-md-4 col-sm-6 has-margin-bottom"> <img class="img-responsive" src="${resource(dir: 'images', file: 'ministry_1.jpg')}" alt="catholic church">
       <h5>CAMP SAVIO</h5>
