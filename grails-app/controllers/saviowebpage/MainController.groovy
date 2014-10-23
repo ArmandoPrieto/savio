@@ -13,7 +13,7 @@ class MainController {
 		def eventList = googleCalendarReaderService.getEvents()
 		
 		
-		render(view: "index", model:[menus: Menu.list(), events: eventList, posts: postList])
+		render(view: "index", model:[menus: Menu.list(), events: eventList, posts: postList, ministries: Ministry.list(max: 6)])
 		
 		
 	}

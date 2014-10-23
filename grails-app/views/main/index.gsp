@@ -283,6 +283,21 @@
   <div class="section-title">
     <h4> OUR MINISTRIES </h4>
   </div>
+   <g:set var="counter" value="${0}" />
+    <g:each in="${ministries}">
+       <g:if test="${counter % 3 == 0}">
+	        <div class="row feature-block">
+		</g:if>
+		<div class="col-md-4 col-sm-6 has-margin-bottom"> <img class="img-responsive" src="${resource(dir: 'images', file: 'ministry_1.jpg')}" alt="catholic church">
+		    <h5>${it.name}</h5>
+		    <p>${it.shortDescription} </p>
+		    <p><a href="ministry.html" role="button">Read more →</a></p>
+		</div>
+		<g:set var="counter" value="${counter + 1}" />
+		<g:if test="${it == ministries.last() || counter % 3 == 0}">
+	    	 </div>
+		</g:if>
+	</g:each>
   <div class="row feature-block">
     <div class="col-md-4 col-sm-6 has-margin-bottom"> <img class="img-responsive" src="${resource(dir: 'images', file: 'ministry_1.jpg')}" alt="catholic church">
       <h5>CAMP SAVIO</h5>
@@ -303,6 +318,7 @@
     </div>
     <!-- /.col-md-4 --> 
   </div>
+  
   <div class="row feature-block">
     <div class="col-md-4 col-sm-6 has-margin-bottom"> <img class="img-responsive" src="${resource(dir: 'images', file: 'ministry_1.jpg')}" alt="catholic church">
       <h5>SALESIAN ORATORY</h5>

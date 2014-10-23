@@ -57,6 +57,7 @@ grails.project.dependency.resolution = {
 		compile 'org.jsoup:jsoup:1.8.1'
 		
 		
+		
     }
 
     plugins {
@@ -80,8 +81,11 @@ grails.project.dependency.resolution = {
         // plugins needed at runtime but not for compilation
         runtime ":hibernate4:4.3.5.5" // or ":hibernate:3.6.10.17"
         runtime ":database-migration:1.4.0"
-      //  runtime ":jquery:1.11.1"
-
+        runtime ":jquery:1.11.1"
+		/*compile (":jquery-validation-ui:1.4.9"){
+				export = false
+			
+		}*/
         // Uncomment these to enable additional asset-pipeline capabilities
         //compile ":sass-asset-pipeline:1.9.0"
         //compile ":less-asset-pipeline:1.10.0"

@@ -1,6 +1,6 @@
 package general.demographic
 
-class Person {
+class Person extends Actor{
 	
 	String firstName
 	String lastName
