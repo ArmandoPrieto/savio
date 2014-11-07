@@ -43,8 +43,10 @@
 		<g:message code="ministry.description.label" default="Description" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="description" required="" value="${ministryInstance?.description}"/>
-
+	 <textarea id='edit' name="description" style="margin-top: 30px;" >
+	 ${ministryInstance?.description}
+      </textarea>
+	
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: ministryInstance, field: 'identities', 'error')} ">

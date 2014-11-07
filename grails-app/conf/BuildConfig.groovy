@@ -55,13 +55,13 @@ grails.project.dependency.resolution = {
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
 		
 		compile 'org.jsoup:jsoup:1.8.1'
+		compile 'org.imgscalr:imgscalr-lib:4.2'
 		
 		
 		
     }
 
     plugins {
-		
 		//Joda time
 		compile ":joda-time:1.5"
 		//Grails Rest
@@ -75,7 +75,7 @@ grails.project.dependency.resolution = {
         // plugins for the compile step
         compile ":scaffolding:2.1.2"
         compile ':cache:1.1.7'
-        compile ":asset-pipeline:1.9.6"
+        compile ":asset-pipeline:1.9.9"
 		
 
         // plugins needed at runtime but not for compilation
@@ -87,13 +87,15 @@ grails.project.dependency.resolution = {
 			
 		}*/
         // Uncomment these to enable additional asset-pipeline capabilities
-        //compile ":sass-asset-pipeline:1.9.0"
-        //compile ":less-asset-pipeline:1.10.0"
-        //compile ":coffee-asset-pipeline:1.8.0"
-        //compile ":handlebars-asset-pipeline:1.3.0.3"
+     /*   compile ":sass-asset-pipeline:1.9.1"
+        compile ":less-asset-pipeline:1.10.0"
+        compile ":coffee-asset-pipeline:1.9.0"
+        compile ":handlebars-asset-pipeline:1.3.0.3"
+		*/
 		
 		//Twitter Boostrap
 		runtime ':twitter-bootstrap:3.2.0.2' // current: 3.2.0.2
+		
 		
 		
     }

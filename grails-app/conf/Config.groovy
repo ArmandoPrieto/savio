@@ -199,3 +199,8 @@ jqueryValidationUi {
 	]	
 }
 
+
+file.upload.directory = '/images/uploads'
+
+
+

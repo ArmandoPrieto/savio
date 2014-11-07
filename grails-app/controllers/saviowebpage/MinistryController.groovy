@@ -20,6 +20,10 @@ class MinistryController {
 		respond ministryInstance, model:[ministries: Ministry.list(max: 3)] 
     }
 
+	def text() {
+		
+		render(view: "text")
+	}
     def create() {
         respond new Ministry(params)
     }

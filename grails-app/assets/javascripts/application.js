@@ -6,6 +6,14 @@
 // to create separate JavaScript files as needed.
 //
 //= require jquery
+//= require bootstrap-image-gallery
+//= bootstrap-image-gallery
+//= jquery.fileupload 
+//= jquery.fileupload-ip 
+//= jquery.fileupload-ui
+//= jquery.iframe-transport 
+//= load-image
+//= tmpl
 //= require_tree .
 //= require_self
 

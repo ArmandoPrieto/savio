@@ -22,9 +22,8 @@
 
 <div class="container has-margin-bottom">
   <div class="row">
-    <div class="col-md-9 has-margin-bottom"> <img src="${resource(dir: 'images', file: 'ministry-pic.jpg')}" class="img-responsive has-margin-xs-bottom" alt="ministry">
-      <p>${ministryInstance.description}</p>
-      
+    <div class="col-md-9 has-margin-bottom"> <img src="${ministryInstance.imageUrl}" class="img-responsive has-margin-xs-bottom" alt="ministry">
+      <p>${raw(ministryInstance.description)}</p>
       <p> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum. </p>
       <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
       <blockquote> And we know that in all things God works for the good of those who love him, who have been called according to his purpose. </blockquote>
