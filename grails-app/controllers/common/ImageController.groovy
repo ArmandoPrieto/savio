@@ -57,6 +57,11 @@ class ImageController {
 		def cropH = params.cropH //=250
 		def cropW = params.cropW //=400
 		
+		if(cropH > imgH || cropW > imgW){
+		
+			render(["status":"error",
+				"message": "The image is smaller than the frame"] as grails.converters.JSON)
+		}else{
 		String storageDirectory = servletContext.getRealPath(grailsApplication.config.file.upload.directory)
 		def token = params.imgUrl.split("\\/");
 		String filenameBase =token[token.size()-1]
@@ -73,20 +78,12 @@ class ImageController {
 		File cropFile = new File("$storageDirectory/crop-$filenameBase")
 		ImageIO.write(scaledImg, extension, cropFile)
 	
-	/*	
-		{
-			"status":"success",
-			"url":"path/croppedImg.jpg"
-		}
-		
-		{
-			"status":"error",
-			"message":"your error message text"
-		}
-		*/
 		render(["status":"success",
 			"url": g.resource(dir: grailsApplication.config.file.upload.directory, file: "crop-$filenameBase", absolute: true)] as grails.converters.JSON)
-	}
+	
+		}
+		
+		}
 	def upload() {
 		
 		switch(request.method){

@@ -195,6 +195,7 @@
 					}
 					
 					if(response.status=='error'){
+						
 						that.obj.append('<p style="width:100%; height:100%; text-align:center; line-height:'+that.objH+'px;">'+response.message+'</p>');
 						that.hideLoader();
 						setTimeout( function(){ that.reset(); },2000)
@@ -230,7 +231,7 @@
 			
 			/*SET UP SOME VARS*/
 			that.img = that.obj.find('img');
-			that.img.wrap('<div class="cropImgWrapper" style="overflow:hidden; z-index:1; position:absolute; width:'+that.objW+'px; height:'+that.objH+'px;"></div>');
+			that.img.wrap('<div class="cropImgWrapper"  style="background-color: white; overflow:hidden; z-index:1; position:absolute; width:'+that.objW+'px; height:'+that.objH+'px;"></div>');
 	
 			/*INIT DRAGGING*/
 			that.createCropControls();
@@ -474,7 +475,10 @@
 
 					}
 					if(response.status=='error'){
-						that.obj.append('<p style="width:100%; height:100%;>'+response.message+'</p>">');
+						alert(response.message);
+						//that.obj.append('<p style="width:100%; height:100%;font-color:black>'+response.message+'</p>">');
+						that.hideLoader();
+						setTimeout( function(){ that.reset(); },500)
 					}
 					
 					if (that.options.onAfterImgCrop) that.options.onAfterImgCrop.call(that);

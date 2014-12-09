@@ -23,13 +23,17 @@ class GoogleBloggerReaderService {
 	
 	def getPosts(){
 		
+		def postList = [];
 		
 		RestBuilder rest = new RestBuilder()
 		String service = "https://www.googleapis.com/blogger/v3/blogs/7012492291395427842/posts?key={key}&fetchImages={fetchImages}"
 		def urlVariables = [key:"AIzaSyDeoXli9PdQv2sOFjfAPbhKeMmKf9CG3wA",fetchImages:'true']
+		try{
 		def resp = rest.get(service,urlVariables)
+		}catch(Exception e ){
+		return postList
+		}
 		
-		def postList = [];
 		Post post = null
 		resp.json.items.each{
 			post = new Post();

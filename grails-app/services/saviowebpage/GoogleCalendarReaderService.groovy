@@ -27,8 +27,12 @@ class GoogleCalendarReaderService {
 		RestBuilder rest = new RestBuilder()
 		String service = "https://www.googleapis.com/calendar/v3/calendars/prieto.arm@gmail.com/events?key={key}"
 		def urlVariables = [key:"AIzaSyDeoXli9PdQv2sOFjfAPbhKeMmKf9CG3wA"]
-		def resp = rest.get(service,urlVariables)
-		
+		def event = [];
+		try{
+			def resp = rest.get(service,urlVariables)
+		}catch(Exception e ){
+			return event
+		}
 		DateTimeZone startTimeZone = null
 		DateTime startDateTime = null
 		
@@ -36,7 +40,6 @@ class GoogleCalendarReaderService {
 		DateTime endDateTime  = null
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 		Date parseDate = null
-		def event = [];
 		Event evento = null
 		resp.json.items.each{
 			evento = new Event();

@@ -2,7 +2,7 @@
 <html>
 	<head>
 	
-		<meta name="layout" content="savioLayout"> 
+		<meta name="layout" content="main"> 
 		<g:set var="entityName" value="${message(code: 'ministry.label', default: 'Ministry')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 		
@@ -11,29 +11,20 @@
 		   <link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" />
 		<script src="${resource(dir: 'js', file: 'croppic.js')}"></script>
 		<script src="${resource(dir: 'js', file: 'main.js')}"></script>
-	<g:javascript>
-	alert("Hola");
-	//var cropperHeader = new Crop('yourId');
-	
-	
-	
-	//alert("Hola");
-	
-	
-</g:javascript>
+
 <style>
 	#cropContainerHeader, #cropContainerModal{
 			width: 400px;
 			height: 250px;
+			
 			position:relative; /* or fixed or absolute */
 		}
+	
 	</style>
 
 	</head>
 	<body>
 	
-
-
 	
 	
     
@@ -61,6 +52,7 @@
 			<div id="yourId">
   
     </div>
+    
    
     <div class="container">
 		<div class="row mt centered">
@@ -75,27 +67,24 @@
 				<p class="centered">( open in modal window )</p>
 				<div id="cropContainerModal"></div>
 			</div>
-			
-		
 		</div>
-	</div>
-    
-    
-    
-			<g:form url="[resource:ministryInstance, action:'save']" >
+
+	
+			
+		</div>
+</div>
+	
+    		<g:form url="[resource:ministryInstance, action:'save']" >
 				<fieldset class="form">
 					<g:render template="form"/>
 				</fieldset>
-				
-				
 				<fieldset class="buttons">
 					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
 				</fieldset>
 			</g:form>
-		</div>
-		<script>
-	
 		
+		
+		<script>
 		
 		var croppicContainerModalOptions = {
 				uploadUrl:'${createLink(controller:'image', action: 'upload', absolute: true)}',
@@ -109,5 +98,7 @@
 	
 		
 	</script>
+
+
 	</body>
 </html>
