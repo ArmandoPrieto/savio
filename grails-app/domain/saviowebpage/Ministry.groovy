@@ -27,12 +27,13 @@ class Ministry extends Group{
 	
 
     static constraints = {
-		imageUrl(url: true)
+		//imageUrl(url: true)
 		shortDescription size: 1..200
 		
     }
 	static mapping = {
 		description type: "text"
+		//imageUrl type: "text"
 		
 	 }
 }

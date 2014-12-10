@@ -31,11 +31,13 @@ class MinistryController {
     @Transactional
     def save(Ministry ministryInstance) {
         if (ministryInstance == null) {
+			
             notFound()
             return
         }
 
         if (ministryInstance.hasErrors()) {
+			
             respond ministryInstance.errors, view:'create'
             return
         }

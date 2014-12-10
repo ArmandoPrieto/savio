@@ -3,11 +3,12 @@
 
 
 <div class="fieldcontain ${hasErrors(bean: ministryInstance, field: 'imageUrl', 'error')} required">
-	<label for="imageUrl">
+	<%-- <label for="imageUrl">
 		<g:message code="ministry.imageUrl.label" default="Image Url" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field type="url" name="imageUrl" required="" value="${ministryInstance?.imageUrl}"/>
+	--%>
+	<g:field id="myOutputId" type="url" name="imageUrl" required="" value="${ministryInstance?.imageUrl}" style="visibility:hidden"/>
 
 </div>
 
@@ -19,7 +20,7 @@
 	<g:textField name="shortDescription" maxlength="200" required="" value="${ministryInstance?.shortDescription}"/>
 
 </div>
-
+<%--
 <div class="fieldcontain ${hasErrors(bean: ministryInstance, field: 'contacts', 'error')} ">
 	<label for="contacts">
 		<g:message code="ministry.contacts.label" default="Contacts" />
@@ -37,18 +38,24 @@
 
 
 </div>
+--%>
 
 <div class="fieldcontain ${hasErrors(bean: ministryInstance, field: 'description', 'error')} required">
 	<label for="description">
 		<g:message code="ministry.description.label" default="Description" />
 		<span class="required-indicator">*</span>
 	</label>
+	 <section id="editor">
+	 
 	 <textarea id='edit' name="description" style="margin-top: 30px;" >
 	 ${ministryInstance?.description}
       </textarea>
+      </section>
+      
 	
 </div>
 
+<%--
 <div class="fieldcontain ${hasErrors(bean: ministryInstance, field: 'identities', 'error')} ">
 	<label for="identities">
 		<g:message code="ministry.identities.label" default="Identities" />
@@ -66,7 +73,8 @@
 
 
 </div>
-
+--%>
+<%--
 <div class="fieldcontain ${hasErrors(bean: ministryInstance, field: 'leaders', 'error')} ">
 	<label for="leaders">
 		<g:message code="ministry.leaders.label" default="Leaders" />
@@ -75,6 +83,7 @@
 	<g:select name="leaders" from="${general.demographic.Person.list()}" multiple="multiple" optionKey="id" size="5" value="${ministryInstance?.leaders*.id}" class="many-to-many"/>
 
 </div>
+--%>
 
 <div class="fieldcontain ${hasErrors(bean: ministryInstance, field: 'name', 'error')} required">
 	<label for="name">
@@ -85,6 +94,7 @@
 
 </div>
 
+<%--
 <div class="fieldcontain ${hasErrors(bean: ministryInstance, field: 'participants', 'error')} ">
 	<label for="participants">
 		<g:message code="ministry.participants.label" default="Participants" />
@@ -93,7 +103,8 @@
 	<g:select name="participants" from="${general.demographic.Person.list()}" multiple="multiple" optionKey="id" size="5" value="${ministryInstance?.participants*.id}" class="many-to-many"/>
 
 </div>
-
+--%>
+<%--
 <div class="fieldcontain ${hasErrors(bean: ministryInstance, field: 'roles', 'error')} ">
 	<label for="roles">
 		<g:message code="ministry.roles.label" default="Roles" />
@@ -102,7 +113,8 @@
 	<g:select name="roles" from="${general.demographic.Role.list()}" multiple="multiple" optionKey="id" size="5" value="${ministryInstance?.roles*.id}" class="many-to-many"/>
 
 </div>
-
+--%>
+<%--
 <div class="fieldcontain ${hasErrors(bean: ministryInstance, field: 'type', 'error')} required">
 	<label for="type">
 		<g:message code="ministry.type.label" default="Type" />
@@ -111,4 +123,4 @@
 	<g:textField name="type" required="" value="${ministryInstance?.type}"/>
 
 </div>
-
+--%>

@@ -163,20 +163,15 @@
                     processData: false,
                     type: 'POST'
 				}).always(function(data){
-					alert("Aqui " );
+					
 					try {
 						//response = jQuery.parseJSON(data);
 						response = data;
 					}
 					catch(err) {
-						alert("Aqui "+ err);
+						alert(err);
 					} 
-					
-					
-					
 					if(response.status=='success'){
-						
-						
 						that.imgInitW = that.imgW = response.width;
 						that.imgInitH = that.imgH = response.height;
 						

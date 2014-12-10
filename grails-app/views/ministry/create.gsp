@@ -7,12 +7,23 @@
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 		
 		
-		  <link rel="stylesheet" href="${resource(dir: 'css', file: 'croppic.css')}" />
-		   <link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" />
+		 <link rel="stylesheet" href="${resource(dir: 'css', file: 'croppic.css')}" />
+		  <link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" />
+		  
+		 <link rel="stylesheet" href="${resource(dir: 'css', file: 'font-awesome.css')}" type="text/css" />
+		  <link rel="stylesheet" href="${resource(dir: 'css', file: 'froala_editor.css')}" type="text/css" />
+          <link rel="stylesheet" href="${resource(dir: 'css', file: 'froala_style.css')}" type="text/css" />
+  
 		<script src="${resource(dir: 'js', file: 'croppic.js')}"></script>
 		<script src="${resource(dir: 'js', file: 'main.js')}"></script>
 
 <style>
+ section {
+            width: 100%;
+            margin: auto;
+            text-align: left;
+        }
+        
 	#cropContainerHeader, #cropContainerModal{
 			width: 400px;
 			height: 250px;
@@ -41,13 +52,14 @@
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			<g:hasErrors bean="${ministryInstance}">
+			
+		<g:hasErrors bean="${ministryInstance}">
 			<ul class="errors" role="alert">
-				<g:eachError bean="${ministryInstance}" var="error">
-				<li <g:if test="${error in org.springframework.validacroppicModaltion.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-				</g:eachError>
-			</ul>
-			</g:hasErrors>
+	    		<g:eachError><p><g:message error="${it}"/></p></g:eachError>
+	    	</ul>
+		</g:hasErrors>
+
+			
 			
 			<div id="yourId">
   
@@ -63,7 +75,7 @@
 		
 		<div class="row mt ">
 			<div class="col-lg-4 ">
-				<h4 class="centered"> MODAL </h4>
+				<h4 class="centered"> IMAGE </h4>
 				<p class="centered">( open in modal window )</p>
 				<div id="cropContainerModal"></div>
 			</div>
@@ -82,13 +94,25 @@
 					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
 				</fieldset>
 			</g:form>
-		
-		
-		<script>
-		
+		<script src="${resource(dir: 'js/libs', file: 'jquery-1.11.1.min.js')}"></script>
+		<script src="${resource(dir: 'js', file: 'froala_editor.min.js')}"></script>
+		<script src="${resource(dir: 'js/plugins', file: 'tables.min.js')}"></script>
+		<script src="${resource(dir: 'js/plugins', file: 'lists.min.js')}"></script>
+		<script src="${resource(dir: 'js/plugins', file: 'colors.min.js')}"></script>
+		<script src="${resource(dir: 'js/plugins', file: 'media_manager.min.js')}"></script>
+		<script src="${resource(dir: 'js/plugins', file: 'font_family.min.js')}"></script>
+		<script src="${resource(dir: 'js/plugins', file: 'font_size.min.js')}"></script>
+		<script src="${resource(dir: 'js/plugins', file: 'block_styles.min.js')}"></script>
+		<script src="${resource(dir: 'js/plugins', file: 'video.min.js')}"></script>
+				<script>
+		  $(function(){
+	          $('#edit')
+	            .editable({inlineMode: false})
+	      });
 		var croppicContainerModalOptions = {
 				uploadUrl:'${createLink(controller:'image', action: 'upload', absolute: true)}',
 				cropUrl:'${createLink(controller:'image', action: 'crop', absolute: true)}',
+				outputUrlId:'myOutputId',
 				modal:true,
 				imgEyecandyOpacity:0.4,
 				loaderHtml:'<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> '
