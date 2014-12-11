@@ -5,7 +5,7 @@
 		</g:if>
 		<div class="col-md-4 col-sm-6 has-margin-bottom">
 		 <div style="width:370px;height:120px;overflow:hidden">
-		 <img class="img-responsive" src="${it.imageUrl}" alt="catholic church">
+		 <img class="img-responsive" src="${createLink(controller: 'image', action: 'thumbnail',id: ministryInstance.id)}" alt="catholic church">
 		 </div>
 		    <h5>${it.name.toUpperCase()}</h5>
 		    <p>${it.shortDescription}</p>

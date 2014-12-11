@@ -30,9 +30,7 @@ class GoogleCalendarReaderService {
 		def event = [];
 		try{
 			def resp = rest.get(service,urlVariables)
-		}catch(Exception e ){
-			return event
-		}
+		
 		DateTimeZone startTimeZone = null
 		DateTime startDateTime = null
 		
@@ -73,7 +71,9 @@ class GoogleCalendarReaderService {
 		
 		//println(json)
 		return event
-		
+		}catch(Exception e ){
+		return event
+	}
 		
 		
 	}

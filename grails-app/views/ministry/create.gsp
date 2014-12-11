@@ -18,6 +18,12 @@
 		<script src="${resource(dir: 'js', file: 'main.js')}"></script>
 
 <style>
+
+ .fieldcontain input{
+ width:50%;
+ 
+ 
+ }
  section {
             width: 100%;
             margin: auto;
@@ -25,8 +31,14 @@
         }
         
 	#cropContainerHeader, #cropContainerModal{
-			width: 400px;
-			height: 250px;
+			width: 1300px;
+			height: 600px;
+			border-color:black;
+			border-style: solid;
+    		border-top-width: 5px;
+    		border-right-width: 1px;
+    		border-left-width: 1px;
+    		border-bottom-width: 1px;
 			
 			position:relative; /* or fixed or absolute */
 		}
@@ -59,7 +71,7 @@
 	    	</ul>
 		</g:hasErrors>
 
-			
+		<section>	
 			
 			<div id="yourId">
   
@@ -67,16 +79,12 @@
     
    
     <div class="container">
-		<div class="row mt centered">
-			<div class="col-lg-12">
-				<h1 id="examplesTarget" style="border-bottom:1px solid #ccc; padding-bottom:20px;">EXAMPLES</h1>
-			</div>
-		</div><!-- /row -->
+		
 		
 		<div class="row mt ">
 			<div class="col-lg-4 ">
-				<h4 class="centered"> IMAGE </h4>
-				<p class="centered">( open in modal window )</p>
+				<h4 class="centered"> Head Image </h4>
+				
 				<div id="cropContainerModal"></div>
 			</div>
 		</div>
@@ -84,6 +92,7 @@
 	
 			
 		</div>
+		</section>
 </div>
 	
     		<g:form url="[resource:ministryInstance, action:'save']" >

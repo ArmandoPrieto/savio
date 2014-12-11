@@ -30,9 +30,6 @@ class GoogleBloggerReaderService {
 		def urlVariables = [key:"AIzaSyDeoXli9PdQv2sOFjfAPbhKeMmKf9CG3wA",fetchImages:'true']
 		try{
 		def resp = rest.get(service,urlVariables)
-		}catch(Exception e ){
-		return postList
-		}
 		
 		Post post = null
 		resp.json.items.each{
@@ -61,6 +58,10 @@ class GoogleBloggerReaderService {
 		
 		println(json)
 		return postList
+		
+		}catch(Exception e ){
+		return postList
+		}
 		
 		
 		

@@ -24,7 +24,7 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="imageUrl" title="${message(code: 'ministry.imageUrl.label', default: 'Image Url')}" />
+						<g:sortableColumn property="imageId" title="${message(code: 'ministry.imageId.label', default: 'Image Url')}" />
 					
 						<g:sortableColumn property="shortDescription" title="${message(code: 'ministry.shortDescription.label', default: 'Short Description')}" />
 					
@@ -40,7 +40,7 @@
 				<g:each in="${ministryInstanceList}" status="i" var="ministryInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${ministryInstance.id}">${fieldValue(bean: ministryInstance, field: "imageUrl")}</g:link></td>
+						<td><g:link action="show" id="${ministryInstance.id}">${fieldValue(bean: ministryInstance, field: "imageId")}</g:link></td>
 					
 						<td>${fieldValue(bean: ministryInstance, field: "shortDescription")}</td>
 					

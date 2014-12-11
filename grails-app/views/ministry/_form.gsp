@@ -2,16 +2,23 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: ministryInstance, field: 'imageUrl', 'error')} required">
-	<%-- <label for="imageUrl">
-		<g:message code="ministry.imageUrl.label" default="Image Url" />
+<div class="fieldcontain ${hasErrors(bean: ministryInstance, field: 'imageId', 'error')} required">
+	<%-- <label for="imageId">
+		<g:message code="ministry.imageId.label" default="Image Url" />
 		<span class="required-indicator">*</span>
 	</label>
 	--%>
-	<g:field id="myOutputId" type="url" name="imageUrl" required="" value="${ministryInstance?.imageUrl}" style="visibility:hidden"/>
+	<g:field id="myOutputId" type="text" name="imageId" required="" value="${ministryInstance?.imageId}" style="visibility:hidden"/>
 
 </div>
+<div class="fieldcontain ${hasErrors(bean: ministryInstance, field: 'name', 'error')} required">
+	<label for="name">
+		<g:message code="ministry.name.label" default="Name" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="name" required="" value="${ministryInstance?.name}"/>
 
+</div>
 <div class="fieldcontain ${hasErrors(bean: ministryInstance, field: 'shortDescription', 'error')} required">
 	<label for="shortDescription">
 		<g:message code="ministry.shortDescription.label" default="Short Description" />
@@ -85,14 +92,7 @@
 </div>
 --%>
 
-<div class="fieldcontain ${hasErrors(bean: ministryInstance, field: 'name', 'error')} required">
-	<label for="name">
-		<g:message code="ministry.name.label" default="Name" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="name" required="" value="${ministryInstance?.name}"/>
 
-</div>
 
 <%--
 <div class="fieldcontain ${hasErrors(bean: ministryInstance, field: 'participants', 'error')} ">
@@ -100,7 +100,7 @@
 		<g:message code="ministry.participants.label" default="Participants" />
 		
 	</label>
-	<g:select name="participants" from="${general.demographic.Person.list()}" multiple="multiple" optionKey="id" size="5" value="${ministryInstance?.participants*.id}" class="many-to-many"/>
+	<g:selecMAGEt name="participants" from="${general.demographic.Person.list()}" multiple="multiple" optionKey="id" size="5" value="${ministryInstance?.participants*.id}" class="many-to-many"/>
 
 </div>
 --%>

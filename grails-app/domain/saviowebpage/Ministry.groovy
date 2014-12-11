@@ -8,7 +8,7 @@ class Ministry extends Group{
 	String name
 	String description
 	String shortDescription
-	String imageUrl
+	String imageId
 	
 	public Ministry(){
 		

@@ -13,7 +13,9 @@ import org.imgscalr.Scalr.Method
 
 class ImageController {
 	
+	
 	def crop(){
+		String storageDirectory = servletContext.getRealPath(grailsApplication.config.file.upload.directory)
 		
 		if (request instanceof MultipartHttpServletRequest){
 			
@@ -62,29 +64,49 @@ class ImageController {
 			render(["status":"error",
 				"message": "The image is smaller than the frame"] as grails.converters.JSON)
 		}else{
-		String storageDirectory = servletContext.getRealPath(grailsApplication.config.file.upload.directory)
+		
 		def token = params.imgUrl.split("\\/");
-		String filenameBase =token[token.size()-1]
-		def nameAndExtension = filenameBase.split("\\.")
+		String imageId =token[token.size()-1]
+		def nameAndExtension = imageId.split("\\.")
 		String extension = nameAndExtension[nameAndExtension.size()-1]
-		File newFile = new File("$storageDirectory/$filenameBase")
+		File newFile = new File("$storageDirectory/$imageId")
 		
 		BufferedImage img = ImageIO.read(newFile);
 		
 		BufferedImage scaledImg = Scalr.resize(img, Method.QUALITY, Float.parseFloat(imgW).round(), Float.parseFloat(imgH).round());
 		scaledImg = Scalr.crop(scaledImg, Float.parseFloat(imgX1).round(), Float.parseFloat(imgY1).round(), Float.parseFloat(cropW).round(), Float.parseFloat(cropH).round(), null)
 		
-		storageDirectory = servletContext.getRealPath(grailsApplication.config.file.upload.directory)
-		File cropFile = new File("$storageDirectory/crop-$filenameBase")
+	
+		File cropFile = new File("$storageDirectory/crop-$imageId")
 		ImageIO.write(scaledImg, extension, cropFile)
+		
+		
+		//Thumbail
+		BufferedImage scaledImgThumbail = Scalr.resize(scaledImg, Method.QUALITY, 370, 120);
+		File cropFileThumbail = new File("$storageDirectory/thumbails/thumbail-$imageId")
+		ImageIO.write(scaledImgThumbail, extension, cropFileThumbail)
 	
+		//delete(imageId)
+		Image imgg = new Image()
+		imgg.setImageId(imageId)
+		imgg.setOriginalFilename("crop-$imageId")
+		imgg.setThumbnailFilename("thumbail-$imageId")
+		imgg.setNewFilename("crop-$imageId")
+		imgg.setFileSize(1)
+		imgg.save(true)
+		
+		//newFile.delete()
 		render(["status":"success",
-			"url": g.resource(dir: grailsApplication.config.file.upload.directory, file: "crop-$filenameBase", absolute: true)] as grails.converters.JSON)
-	
+			//"url": g.resource(dir: grailsApplication.config.file.upload.directory, file: "crop-$imageId", absolute: true)*/
+			
+			"url": g.createLink(controller: 'image', action:'picture', id: imgg.getId())] as grails.converters.JSON)
 		}
 		
 		}
-	def upload() {
+
+
+	
+			def upload() {
 		
 		switch(request.method){
 			case "GET":
@@ -164,26 +186,31 @@ class ImageController {
 	}
 
 	def picture(){
+		String storageDirectory = servletContext.getRealPath(grailsApplication.config.file.upload.directory)
 		def pic = Image.get(params.id)
-		File picFile = new File("${grailsApplication.config.file.upload.directory?:'/tmp'}/${pic.newFilename}")
+		
+		File picFile = new File("$storageDirectory/crop-${pic.imageId}")
+		println("Hola")
 		response.contentType = 'image/jpeg'
 		response.outputStream << new FileInputStream(picFile)
 		response.outputStream.flush()
 	}
 
 	def thumbnail(){
+		String storageDirectory = servletContext.getRealPath(grailsApplication.config.file.upload.directory)
 		def pic = Image.get(params.id)
-		File picFile = new File("${grailsApplication.config.file.upload.directory?:'/tmp'}/${pic.thumbnailFilename}")
+		File picFile = new File("$storageDirectory/thumbails/thumbail-${pic.imageId}")
 		response.contentType = 'image/png'
 		response.outputStream << new FileInputStream(picFile)
 		response.outputStream.flush()
 	}
 
 	def delete(){
+		String storageDirectory = servletContext.getRealPath(grailsApplication.config.file.upload.directory)
 		def pic = Image.get(params.id)
-		File picFile = new File("${grailsApplication.config.file.upload.directory?:'/tmp'}/${pic.newFilename}")
+		File picFile = new File("$storageDirectory/${pic.imageId}")
 		picFile.delete()
-		File thumbnailFile = new File("${grailsApplication.config.file.upload.directory?:'/tmp'}/${pic.thumbnailFilename}")
+		File thumbnailFile = new File("$storageDirectory/${pic.imageId}")
 		thumbnailFile.delete()
 		pic.delete()
 
